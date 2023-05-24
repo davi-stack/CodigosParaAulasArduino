@@ -1,7 +1,4 @@
 // Defina as conexões do sensor ultrasônico
-#define TRIGGER_PIN 2
-#define ECHO_PIN 3
-
 void setup() {
   Serial.begin(9600); // Inicializa a comunicação serial
   pinMode(TRIGGER_PIN, OUTPUT); // Configura o pino do trigger como saída
@@ -20,7 +17,7 @@ void loop() {
   delay(500); // Aguarda um intervalo antes da próxima medição
 }
 
-int medirDistancia() {
+int medirDistancia(int TRIGGER_PIN, int ECHO_PIN) {
   // Envia um pulso curto no pino de trigger
   digitalWrite(TRIGGER_PIN, LOW);
   delayMicroseconds(2);
