@@ -1,0 +1,23 @@
+void girarServo(int servoPin, int angulo) {
+    int pulseWidth = map(angulo, 0, 180, 1000, 2000);  // Mapeia o ângulo para a largura do pulso em microssegundos
+    digitalWrite(servoPin, HIGH);  // Ativa o sinal do servo motor
+    delayMicroseconds(pulseWidth);  // Aguarda a largura do pulso
+    digitalWrite(servoPin, LOW);  // Desativa o sinal do servo motor
+    delay(20);  // Intervalo de tempo entre as posições (ajuste conforme necessário)
+}
+
+void setup() {
+    int servoPin = 9;  // Pino de controle do servo motor
+    pinMode(servoPin, OUTPUT);  // Configura o pino do servo motor como saída
+}
+
+void loop() {
+    int servoPin = 9;  // Pino de controle do servo motor
+    
+    // Gira o servo motor de 0 a 180 graus em incrementos de 30 graus
+    for (int angulo = 0; angulo <= 180; angulo += 30) {
+        girarServo(servoPin, angulo);
+        delay(1000);  // Aguarda 1 segundo antes de girar para a próxima posi
+}
+
+}
