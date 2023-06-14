@@ -1,6 +1,6 @@
 void girarServo(int servoPin, int angulo) {
     pinMode(servoPin, OUTPUT);
-    int pulseWidth = map(angulo, 0, 180, 1000, 2000);  // Mapeia o ângulo para a largura do pulso em microssegundos
+    int pulseWidth = map(angulo, 0, 180, 544, 2400);  // Mapeia o ângulo para a largura do pulso em microssegundos
     digitalWrite(servoPin, HIGH);  // Ativa o sinal do servo motor
     delayMicroseconds(pulseWidth);  // Aguarda a largura do pulso
     digitalWrite(servoPin, LOW);  // Desativa o sinal do servo motor
