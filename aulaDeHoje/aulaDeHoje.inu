@@ -5,4 +5,9 @@ Serial.begin(300);
 void loop(){
 int x = analogRead(A1);
 Serial.println(x);
+if(x<400){
+//faz isso quando estiver claro
+}else{
+
+}
 }
