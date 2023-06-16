@@ -3,10 +3,6 @@ pinMode(A0, INPUT);
 Serial.begin(300);
 }
 void loop(){
-int x = analogRead(A0);
-if(x>600){
-
-}else{
-
-}
+int x = analogRead(A1);
+Serial.println(x);
 }
